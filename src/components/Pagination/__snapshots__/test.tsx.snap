@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Pagination /> should test the button of pagination 1`] = `
+<button
+  class="sc-gsnTZi gosNvN"
+>
+  1
+</button>
+`;
+
+exports[`<Pagination /> should test the data-testid 1`] = `
+<div
+  class="sc-bczRLJ"
+  data-testid="pagination-id"
+>
+  <button
+    class="sc-gsnTZi gosNvN"
+  >
+    1
+  </button>
+  <button
+    class="sc-gsnTZi gCeuqO"
+  >
+    2
+  </button>
+</div>
+`;

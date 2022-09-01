@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PlanetCard /> should test the button of pagination 1`] = `
+<h2
+  class="sc-jSMfEi ejtnTm"
+>
+  Tatooine
+</h2>
+`;
+
+exports[`<PlanetCard /> should test the button of planet details 1`] = `
+<div
+  class="sc-bczRLJ"
+  data-testid="click-planet-details"
+>
+  <div
+    class="sc-gsnTZi fhRtw"
+  >
+    <div
+      class="sc-eCYdqJ kLkWfL"
+    >
+      <h2
+        class="sc-jSMfEi ejtnTm"
+      >
+        Tatooine
+      </h2>
+    </div>
+  </div>
+</div>
+`;
