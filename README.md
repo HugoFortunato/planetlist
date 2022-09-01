@@ -44,3 +44,7 @@ This project calls SWAPI API:
 ```bash
 BaseURL: "https://swapi.dev/api/"
 ```
+
+## Deploy on Vercel
+
+https://planet-list.vercel.app/
