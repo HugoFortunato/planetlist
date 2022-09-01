@@ -2,7 +2,7 @@ import React from "react";
 import { usePlanetList } from "../../context/usePlanetList";
 import Link from "next/link";
 
-import * as S from "./styles";
+import * as S from "../../../styles/styles";
 
 const PlanetDetails = () => {
   const { planetDetails } = usePlanetList();
