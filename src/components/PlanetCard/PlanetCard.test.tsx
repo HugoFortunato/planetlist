@@ -1,7 +1,7 @@
 import PlanetCard from "./index";
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { PlanetListProvider } from "../../context/PlanetList";
+import { PlanetListProvider } from "../../context/PlanetListContext";
 import { Planet } from "../../context/types";
 
 describe("<PlanetCard />", () => {
