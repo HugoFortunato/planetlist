@@ -1,13 +1,17 @@
-import { PlanetCardProps } from "../components/PlanetCard/types";
-
 export type ChildrenType = {
   children: React.ReactNode
 }
 
 export interface ContextType {
   getData: () => void;
-  planetsData: object[]
-  planetDetails: PlanetCardProps
-  setPlanetDetails: (planetDetails: PlanetCardProps) => void
+  planetsData: Planet[]
+  planetDetails: Planet
+  setPlanetDetails: (planetDetails: Planet) => void
 }
 
+export type Planet = {
+  name?: string
+  climate?: string
+  surface_water?: string
+  gravity?: string
+}

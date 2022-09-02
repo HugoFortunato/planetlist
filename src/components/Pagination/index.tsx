@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 
-import * as S from "./styles";
-import { PaginationProps } from "./types";
+import * as S from "./Pagination.styles";
+import { PaginationProps } from "./Pagination.types";
 
 const Pagination = ({
   totalPosts,
@@ -17,17 +17,15 @@ const Pagination = ({
 
   return (
     <S.Pagination data-testid="pagination-id">
-      {pages.map((page, index) => {
-        return (
-          <S.Button
-            key={index}
-            onClick={() => setCurrentPage(page)}
-            active={page === currentPage}
-          >
-            {page}
-          </S.Button>
-        );
-      })}
+      {pages.map((page, index) => (
+        <S.Button
+          key={index}
+          onClick={() => setCurrentPage(page)}
+          active={page === currentPage}
+        >
+          {page}
+        </S.Button>
+      ))}
     </S.Pagination>
   );
 };

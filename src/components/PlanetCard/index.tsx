@@ -1,33 +1,23 @@
 import React from "react";
 
-import * as S from "./styles";
+import * as S from "./PlanetCard.styles";
+import { PlanetCardProps } from "./PlanetCard.types";
 import { usePlanetList } from "../../context/usePlanetList";
-import { PlanetCardProps } from "./types";
 import Link from "next/link";
 
-const PlanetCard = ({
-  name,
-  climate,
-  surface_water,
-  gravity,
-}: PlanetCardProps) => {
+const PlanetCard = ({ planet }: PlanetCardProps) => {
   const { setPlanetDetails } = usePlanetList();
 
   function handleGoDetails() {
-    setPlanetDetails({
-      name: name,
-      climate: climate,
-      surface_water: surface_water,
-      gravity: gravity,
-    });
+    setPlanetDetails(planet);
   }
 
   return (
     <S.Container data-testid="click-planet-details">
-      <Link href={`/details/${name}`}>
+      <Link href={`/details/${planet.name}`}>
         <S.Card onClick={handleGoDetails}>
           <S.CardInfo>
-            <S.Title>{name}</S.Title>
+            <S.Title>{planet.name}</S.Title>
           </S.CardInfo>
         </S.Card>
       </Link>
