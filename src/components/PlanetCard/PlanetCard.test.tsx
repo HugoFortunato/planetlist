@@ -2,17 +2,22 @@ import PlanetCard from "./index";
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { PlanetListProvider } from "../../context/PlanetList";
+import { Planet } from "../../context/types";
 
 describe("<PlanetCard />", () => {
   const Test = () => {
+    const planet: Planet = {
+      name: "Tatooine",
+      climate: "arid",
+      surface_water: "1",
+      gravity: "1 standard",
+    };
+
     return (
       <PlanetListProvider>
         <PlanetCard
           key="1"
-          name="Tatooine"
-          climate="arid"
-          surface_water="1"
-          gravity="1 standard"
+          planet={planet}
           data-testid="click-planet-details"
         />
       </PlanetListProvider>

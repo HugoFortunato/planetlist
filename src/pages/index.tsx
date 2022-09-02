@@ -5,7 +5,7 @@ import { usePlanetList } from "../context/usePlanetList";
 import Pagination from "../components/Pagination";
 import PlanetList from "../components/PlanetList";
 
-import * as S from "../../styles/index.styles";
+import * as S from "../styles/index.styles";
 
 const Home: NextPage = () => {
   const { planetsData } = usePlanetList();
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
   return (
     <S.Container>
       <h1>Planet List</h1>
-      <PlanetList planetsData={currentPosts} />
+      <PlanetList planets={currentPosts} />
 
       <Pagination
         totalPosts={planetsData.length}

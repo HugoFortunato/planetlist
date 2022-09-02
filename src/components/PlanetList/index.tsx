@@ -1,43 +1,36 @@
 import React, { useState } from "react";
 
-import PlanetCard from "../PlanetCard";
-import { PlanetCardProps } from "../PlanetCard/types";
+import PlanetCard from "../../components/PlanetCard";
+import { PlanetListProps } from "./PlanetList.types";
+import { Planet } from "../../context/types";
 
-import * as S from "./styles";
+import * as S from "./PlanetList.styles";
 
-const PlanetList = ({ planetsData }: PlanetCardProps) => {
+const filterPlanetByName = (item: Planet, search: string) => {
+  const clearItemName = item?.name?.toLowerCase() ?? "";
+
+  return search === "" || clearItemName.includes(search);
+};
+
+const PlanetList = ({ planets = [] }: PlanetListProps) => {
   const [search, setSearch] = useState("");
 
   return (
     <>
       <S.Search>Search your planet</S.Search>
       <input
+        data-testid="input"
         type="search"
+        placeholder="search your planet..."
         value={search}
-        onChange={(ev) => setSearch(ev.target.value)}
+        onChange={(ev) => setSearch(ev.target.value?.toLowerCase())}
       />
       <S.List>
-        {planetsData
-          ?.filter((item: PlanetCardProps) => {
-            if (search === "") {
-              return item;
-            } else if (
-              item?.name?.toLowerCase().includes(search.toLocaleLowerCase())
-            ) {
-              return item;
-            }
-          })
-          .map((planet: PlanetCardProps, index: number) => {
-            return (
-              <PlanetCard
-                key={index}
-                name={planet.name}
-                climate={planet.climate}
-                surface_water={planet.surface_water}
-                gravity={planet.gravity}
-              />
-            );
-          })}
+        {planets
+          .filter((planet) => filterPlanetByName(planet, search))
+          .map((planet: Planet, index: number) => (
+            <PlanetCard data-testid="planet-card" key={index} planet={planet} />
+          ))}
       </S.List>
     </>
   );

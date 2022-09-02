@@ -1,14 +1,13 @@
 import React, { createContext, useCallback, useEffect, useState } from "react";
 
 import { api } from "../pages/api/baseURL";
-import { ChildrenType, ContextType } from "./types";
-import { PlanetCardProps } from "../components/PlanetCard/types";
+import { ChildrenType, ContextType, Planet } from "./types";
 
 export const PlanetListContext = createContext({} as ContextType);
 
 export const PlanetListProvider = ({ children }: ChildrenType) => {
-  const [planetsData, setPlanetsData] = useState([]);
-  const [planetDetails, setPlanetDetails] = useState<PlanetCardProps>({
+  const [planetsData, setPlanetsData] = useState<Planet[]>([]);
+  const [planetDetails, setPlanetDetails] = useState<Planet>({
     name: "",
     climate: "",
     surface_water: "",
@@ -28,7 +27,7 @@ export const PlanetListProvider = ({ children }: ChildrenType) => {
   return (
     <PlanetListContext.Provider
       value={{
-        planetsData: planetsData,
+        planetsData,
         getData,
         planetDetails,
         setPlanetDetails,
