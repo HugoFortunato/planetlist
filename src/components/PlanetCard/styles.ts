@@ -19,17 +19,6 @@ export const Card = styled.div`
   }
 `
 
-export const CardImage = styled.div`
-  width: 200px;
-  height: 200px;
-`
-
-export const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-`
-
 export const CardInfo = styled.div`
   margin-top: 1rem;
 `
@@ -37,8 +26,4 @@ export const CardInfo = styled.div`
 export const Title = styled.h2`
   margin-bottom: 10px;
   color: white;
-`
-
-export const Description = styled.h3`
-  color: #272727; 
 `

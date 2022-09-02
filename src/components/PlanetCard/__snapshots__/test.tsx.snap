@@ -2,7 +2,7 @@
 
 exports[`<PlanetCard /> should test the button of pagination 1`] = `
 <h2
-  class="sc-jSMfEi ejtnTm"
+  class="sc-hKMtZM bQbOd"
 >
   Tatooine
 </h2>
@@ -17,10 +17,10 @@ exports[`<PlanetCard /> should test the button of planet details 1`] = `
     class="sc-gsnTZi fhRtw"
   >
     <div
-      class="sc-eCYdqJ kLkWfL"
+      class="sc-dkzDqf bfPdcx"
     >
       <h2
-        class="sc-jSMfEi ejtnTm"
+        class="sc-hKMtZM bQbOd"
       >
         Tatooine
       </h2>

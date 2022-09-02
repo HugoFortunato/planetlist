@@ -42,6 +42,10 @@ export const Title = styled.h2`
   color: white;
 `;
 
+export const Info = styled.span`
+  margin-bottom: 10px;
+`
+
 export const ButtonWrapper = styled.div`
   display: flex;
   align-items: center;

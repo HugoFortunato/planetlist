@@ -2,7 +2,7 @@ import React from "react";
 import { usePlanetList } from "../../context/usePlanetList";
 import Link from "next/link";
 
-import * as S from "../../../styles/styles";
+import * as S from "../../../styles/details.styles";
 
 const PlanetDetails = () => {
   const { planetDetails } = usePlanetList();
@@ -11,21 +11,21 @@ const PlanetDetails = () => {
     <S.CardWrapper>
       <S.Card>
         <S.Title>Planet Info</S.Title>
-        <span style={{ marginBottom: "10px" }}>
+        <S.Info>
           Name: <strong> {planetDetails.name} </strong>
-        </span>
+        </S.Info>
         <br />
-        <span>
+        <S.Info>
           Climate: <strong> {planetDetails.climate} </strong>
-        </span>
+        </S.Info>
         <br />
-        <span>
+        <S.Info>
           Surface: <strong> {planetDetails.surface_water} </strong>
-        </span>
-        <span>
+        </S.Info>
+        <S.Info>
           <br />
           Gravity: <strong> {planetDetails.gravity} </strong>
-        </span>
+        </S.Info>
         <Link href="/">
           <S.ButtonWrapper>
             <S.Button> Back to list </S.Button>
